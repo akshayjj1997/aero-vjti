@@ -1,34 +1,37 @@
 .about {
-  margin:3rem 2rem;
+  margin: 3rem 2rem;
   .about-title {
-    text-align:center;
-    font-size:$primary-size;
-    color:$primary-color;
-    padding:1rem;
+    text-align: center;
+    font-size: $primary-size;
+    color: $primary-color;
+    padding: 1rem;
   }
-  .about-tag {
-    font-size:1.1rem;
-    color:$primary-color;
-  } 
+  .about-text {
+    font-size: 1.1rem;
+    color: $primary-color;
+  }
   .overlay-wrapper {
     .about-image {
-      background-image:url("../img/team.jpg");
-      background-size:cover;
-      background-color:transparent;
-      height:400px;
-      width:500px;
-      position:relative;
-      margin:2rem auto;
-      .btn {
-        border:2px solid #333;
-        position: absolute;
-        background-color:rgba(255,255,255,0.5);
-        top:75%;
-        left:50%;
-        transform:translate(-50%, -50%);
-      }
-      .btn:hover {
-        background-color: rgba(255,255,255,0.8);
+      background-image: url("../img/team.jpg");
+      background-size: cover;
+      background-color: transparent;
+      height: 400px;
+      width: 500px;
+      position: relative;
+      margin: 2rem auto;
+    }
+  }
+}
+
+@media only screen and (max-width:991px) {
+  .about {
+    .about-text {
+      font-size: 1rem;
+    }
+    .overlay-wrapper {
+      .about-image {
+        height: 260px;
+        width: 300px;
       }
     }
   }

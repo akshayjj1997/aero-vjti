@@ -20,5 +20,8 @@
 		.nav-link:hover {
 			color:#444;
 		}
+		.nav-link.active {
+			color: #000;
+		}
 	}
 }
