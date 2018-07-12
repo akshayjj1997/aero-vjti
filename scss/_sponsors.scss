@@ -1,5 +1,7 @@
 .sponsors-list {
   padding:1rem;
+  margin-left:0;
+  margin-right:0;
   .spons-img {
     vertical-align: middle;
     margin:1rem 1rem;
@@ -7,15 +9,14 @@
     img{  
       text-align: center;
       vertical-align: middle;
-      margin:auto 0;
-      min-width:300px;
-      max-width:500px;
+      margin:auto 50px;
+      min-width:200px;
+      max-width:200px;
       width:300px;
       height:auto;
     }
   }
 }
-
 .brochure-wrapper {
   width:100%;
   text-align:center;
@@ -25,5 +26,17 @@
   }
   a:hover {
     text-decoration: none;
+    color:#fff;
+  }
+}
+
+@media only screen and (max-width:991px) {
+  .sponsors-list {
+    .spons-img {
+      margin:1rem 0rem;
+      img{
+        margin:auto 20px;
+      }
+    }
   }
 }

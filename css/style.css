@@ -5,10 +5,8 @@
     text-align: center;
     font-size: 2rem;
     color: #333; }
-  .workshops .tag {
-    text-align: center; }
   .workshops .worshop-list {
-    padding: 2rem 2rem; }
+    padding: 3rem 2rem; }
     .workshops .worshop-list .text .text-title {
       text-align: center;
       color: #333;
@@ -17,15 +15,36 @@
       color: #333;
       font-size: 1.2rem;
       padding: 1rem 2rem; }
+    .workshops .worshop-list .text .contact-details {
+      width: 70%;
+      color: #888;
+      margin: auto; }
+      .workshops .worshop-list .text .contact-details hr {
+        margin: 10px 15px; }
+      .workshops .worshop-list .text .contact-details .btn {
+        width: 200px;
+        margin: 1rem auto;
+        background-color: transparent;
+        border: 2px solid #0085ff; }
+      .workshops .worshop-list .text .contact-details .btn:hover {
+        background-color: #0085ff;
+        color: #fff; }
     .workshops .worshop-list .image {
       padding: 0.3rem;
       text-align: center;
-      vertical-align: middle; }
+      display: flex;
+      align-items: center; }
       .workshops .worshop-list .image img {
         height: auto;
-        width: 350px;
+        width: 450px;
         margin: 1rem auto;
         vertical-align: middle; }
+      .workshops .worshop-list .image div {
+        display: block;
+        margin: auto; }
+        .workshops .worshop-list .image div .fa-youtube-play {
+          color: #cc181e;
+          font-size: 18px; }
 
 @media only screen and (min-width: 768px) {
   .push-md {
@@ -34,7 +53,9 @@
   .pull-md {
     right: 50%; } }
 .sponsors-list {
-  padding: 1rem; }
+  padding: 1rem;
+  margin-left: 0;
+  margin-right: 0; }
   .sponsors-list .spons-img {
     vertical-align: middle;
     margin: 1rem 1rem;
@@ -42,9 +63,9 @@
     .sponsors-list .spons-img img {
       text-align: center;
       vertical-align: middle;
-      margin: auto 0;
-      min-width: 300px;
-      max-width: 500px;
+      margin: auto 50px;
+      min-width: 200px;
+      max-width: 200px;
       width: 300px;
       height: auto; }
 
@@ -55,8 +76,14 @@
   .brochure-wrapper a {
     color: #fff; }
   .brochure-wrapper a:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #fff; }
 
+@media only screen and (max-width: 991px) {
+  .sponsors-list .spons-img {
+    margin: 1rem 0rem; }
+    .sponsors-list .spons-img img {
+      margin: auto 20px; } }
 * {
   box-sizing: border-box; }
 
@@ -64,7 +91,7 @@
 .timeline {
   position: relative;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 45px auto;
   background-color: #eee; }
 
 /* The actual timeline (the vertical ruler) */
@@ -86,12 +113,23 @@
   width: 50%; }
 
 /* The circles on the timeline */
-.container-v::after {
+.left::after {
   content: '';
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -17px;
+  right: -12px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1; }
+
+.right::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
   background-color: white;
   border: 4px solid #FF9F55;
   top: 15px;
@@ -134,7 +172,7 @@
 
 /* Fix the circle for container-vs on the right side */
 .right::after {
-  left: -16px; }
+  left: -12px; }
 
 /* The actual content */
 .content {
@@ -147,6 +185,10 @@
     width: 300px;
     height: auto;
     margin-bottom: 1rem; }
+  .content h2, .content h5, .content p, .content ul {
+    text-align: left; }
+  .content ul {
+    -webkit-padding-start: 15px; }
 
 /* Media queries - Responsive timeline on screens less than 992px wide */
 @media screen and (max-width: 991px) {
@@ -170,7 +212,42 @@
   /* Make sure all circles are at the same spot */
   .left::after,
   .right::after {
-    left: 15px; }
+    left: 18px; }
+
+  /* Make all right container-vs behave like the left ones */
+  .right {
+    left: 0%; } }
+@media only screen and (max-width: 511px) {
+  .timeline::after {
+    left: 20px; }
+
+  /* Full-width container-vs */
+  .container-v {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 5px; }
+    .container-v .content {
+      padding: 20px 5px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      text-align: center; }
+      .container-v .content img {
+        max-width: 280px;
+        height: auto;
+        margin-bottom: 1rem; }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container-v::before {
+    left: 40px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent; }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 8px; }
 
   /* Make all right container-vs behave like the left ones */
   .right {
@@ -296,6 +373,9 @@
     border-radius: 8px;
     margin: 1rem 0;
     text-align: center; }
+    .team-row .team-card .media-icons-wrapper {
+      margin-top: 10px;
+      font-size: 22px; }
     .team-row .team-card .img-container {
       position: relative;
       width: 80%;
@@ -360,6 +440,7 @@
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
       border-radius: 2px;
       text-align: center;
+      height: 350px;
       padding: 1rem;
       cursor: pointer;
       transition: all 0.2s ease-in-out; }

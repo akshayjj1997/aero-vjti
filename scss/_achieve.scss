@@ -7,7 +7,7 @@
 .timeline {
   position: relative;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 45px auto;
   background-color: #eee;
 }
 
@@ -35,12 +35,23 @@
 
 /* The circles on the timeline */
 
-.container-v::after {
+.left::after {
   content: '';
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -17px;
+  right: -12px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.right::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
   background-color: white;
   border: 4px solid #FF9F55;
   top: 15px;
@@ -93,7 +104,7 @@
 /* Fix the circle for container-vs on the right side */
 
 .right::after {
-  left: -16px;
+  left: -12px;
 }
 
 /* The actual content */
@@ -108,6 +119,12 @@
     width: 300px;
     height: auto;
     margin-bottom: 1rem;
+  }
+  h2, h5, p, ul {
+    text-align:left;
+  }
+  ul {
+    -webkit-padding-start: 15px;
   }
 }
 
@@ -134,7 +151,46 @@
   /* Make sure all circles are at the same spot */
   .left::after,
   .right::after {
-    left: 15px;
+    left: 18px;
+  }
+  /* Make all right container-vs behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+@media only screen and (max-width:511px) {
+  .timeline::after {
+    left: 20px;
+  }
+  /* Full-width container-vs */
+  .container-v {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 5px;
+    .content {
+      padding: 20px 5px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      text-align: center;
+      img {
+        max-width:280px;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  /* Make sure that all arrows are pointing leftwards */
+  .container-v::before {
+    left: 40px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 8px;
   }
   /* Make all right container-vs behave like the left ones */
   .right {
