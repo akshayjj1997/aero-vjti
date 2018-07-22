@@ -319,7 +319,12 @@
   .footer .connect-wrapper {
     margin-top: 12px; } }
 .about {
-  margin: 3rem 2rem; }
+  margin: 3rem 2rem;
+  text-align: center; }
+  .about .about-img {
+    width: 80%;
+    text-align: center;
+    margin: 30px auto; }
   .about .about-title {
     text-align: center;
     font-size: 2rem;
@@ -328,14 +333,6 @@
   .about .about-text {
     font-size: 1.1rem;
     color: #333; }
-  .about .overlay-wrapper .about-image {
-    background-image: url("../img/team.jpg");
-    background-size: cover;
-    background-color: transparent;
-    height: 400px;
-    width: 500px;
-    position: relative;
-    margin: 2rem auto; }
 
 @media only screen and (max-width: 991px) {
   .about .about-text {
@@ -358,7 +355,8 @@
 .dept-name {
   color: #333;
   font-size: 2rem;
-  padding: 1rem 2rem; }
+  padding: 1rem 2rem;
+  text-align: center; }
 
 .team-row {
   margin: auto;
