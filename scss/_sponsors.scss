@@ -17,8 +17,22 @@
     }
   }
 }
+.spons-content {
+  padding:1rem 2rem;
+  .spons-text {
+    .title {
+      font-size:22px;
+    }
+    text-align: left;
+    margin:20px auto;
+    font-size:18px;
+  }
+  text-align:center;
+  img {
+    width:400px;
+  }
+}
 .brochure-wrapper {
-  width:100%;
   text-align:center;
   margin:2rem;
   a{
