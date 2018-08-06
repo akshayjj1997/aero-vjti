@@ -22,7 +22,7 @@
       .contact-details {
         width: 70%;
         color: #888;
-        margin: auto;
+        padding: 0rem 2rem;
         hr {
           margin: 10px 15px;
         }
@@ -31,6 +31,7 @@
           margin: 1rem auto;
           background-color: transparent;
           border: 2px solid #0085ff;
+          color: #000;
         }
         .btn:hover {
           background-color:#0085ff;
