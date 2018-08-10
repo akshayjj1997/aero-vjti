@@ -350,13 +350,37 @@
   .about .about-text {
     font-size: 1.1rem;
     color: #333; }
+  .about .media-coverage-wrapper .title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    padding: 1rem; }
+  .about .media-coverage-wrapper .articles-wrapper .wrapper {
+    margin-bottom: 40px; }
+    .about .media-coverage-wrapper .articles-wrapper .wrapper img {
+      margin: 0;
+      width: 100%; }
+    .about .media-coverage-wrapper .articles-wrapper .wrapper .article-name {
+      font-size: 2rem;
+      color: #333;
+      padding: 1rem;
+      padding-bottom: 0;
+      margin-bottom: 8px;
+      padding-left: 0; }
+    .about .media-coverage-wrapper .articles-wrapper .wrapper .article-description {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 12px; }
+    .about .media-coverage-wrapper .articles-wrapper .wrapper a {
+      float: left; }
 
 @media only screen and (max-width: 991px) {
   .about .about-text {
     font-size: 1rem; }
-  .about .overlay-wrapper .about-image {
-    height: 260px;
-    width: 300px; } }
+  .about .media-coverage-wrapper .articles-wrapper .wrapper {
+    margin-bottom: 0px; }
+    .about .media-coverage-wrapper .articles-wrapper .wrapper a {
+      margin-bottom: 20px; } }
 .team-img-wrapper {
   text-align: center;
   padding: 1rem 0; }
